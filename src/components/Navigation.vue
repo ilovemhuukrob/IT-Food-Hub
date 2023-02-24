@@ -1,0 +1,59 @@
+<!-- eslint-disable -->
+
+<template>
+      <v-navigation-drawer permanent location="left" class="align-center">
+        <template v-slot:prepend>
+          <v-img class="pa-16" contain width="180" src="@/assets/logo.svg" />
+        </template>
+
+        <v-list>
+          <v-list-item
+            v-for="(item, i) in customer"
+            :key="i"
+            :value="item"
+            active-color="primary"
+            rounded="xl"
+            class="px-8 mb-6"
+          >
+            <template v-slot:prepend>
+              <v-icon :icon="item.icon"></v-icon>
+            </template>
+            <v-list-item-title v-text="item.text"></v-list-item-title>
+          </v-list-item>
+        </v-list>
+
+        <template v-slot:append>
+          <v-list class="pb-14">
+            <v-list-item
+              value="logout"
+              title="LOGOUT"
+              rounded="xl"
+              class="px-8 test"
+              active-color="red"
+            >
+              <template v-slot:prepend>
+                <v-icon icon="mdi-logout"></v-icon>
+              </template>
+            </v-list-item>
+          </v-list>
+        </template>
+      </v-navigation-drawer>
+</template>
+
+<script>
+export default {
+  data: () => ({
+    customer: [
+      { text: "หน้าแรก", icon: "mdi-home-outline" },
+      { text: "ตะกร้า", icon: "mdi-shopping-outline" },
+      { text: "ข้อความ", icon: "mdi-chat-processing-outline" },
+    ],
+  }),
+};
+</script>
+
+<style scoped>
+.v-list-item-title {
+  font-size: 1em !important;
+}
+</style>
