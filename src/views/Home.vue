@@ -1,11 +1,12 @@
 <template>
-  <v-card>
+  <!-- <v-card>
     <v-layout>
       <Navigation />
       <ProfileBar />
-      <v-main style="min-height:100vh"><Banner /></v-main>
+      <v-main style="min-height:100vh"></v-main>
     </v-layout>
-  </v-card>
+  </v-card> -->
+  <v-main style="min-height:100vh"></v-main>
 </template>
 
 <script lang="ts" setup>
