@@ -7,7 +7,7 @@
       height="350"
       cover
     ></v-img>
-    <v-card
+    <!-- <v-card
       rounded="xl"
       class="pt-8 pb-5 px-8 ma-10"
       style="transform: translateY(-6.25em)"
@@ -60,7 +60,7 @@
           style="transform: translate(33em, 0em)"
         />
       </span>
-    </v-card>
+    </v-card> -->
   </div>
 </template>
 

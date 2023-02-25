@@ -1,4 +1,6 @@
 <template >
+     <!-- Comment -->
+    <!-- อันนี้เป็นกล่อง ที่ข้างในระบุ order ที่ delivery เห็น ในหน้า Order -->
     <v-card class="container">
         <v-card class="order-content">
             <div class="top-content">
