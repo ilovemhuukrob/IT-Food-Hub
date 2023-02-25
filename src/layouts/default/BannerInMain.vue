@@ -31,18 +31,19 @@
 <style scoped>
     * {
         font-family: "Mitr", sans-serif !important;
+
     }
     .banner-Main{
 
-        width: 100%;
+        width: 1300px;
         height: 250px;
         padding-top: 50px;
         padding-left: 50px;
         padding-right: 50px;
-        transform: translateY(-6.25em);
+
     }
     .banner-card{
-        height: 200px;
+       height: 250px;
        border-radius: 50px;
     }
 </style>
