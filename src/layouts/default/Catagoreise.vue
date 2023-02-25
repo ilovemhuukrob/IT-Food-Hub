@@ -23,7 +23,7 @@
     }),
 };
 </script>
-<style>
+<style scoped>
     .catagory-main{
         margin-top: 50px;
         padding-right: 20px;
