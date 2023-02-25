@@ -84,10 +84,6 @@
         height: 100%;
         
     }
-    .row-content{
-        
-    
-    }
     .card-menu{
         margin-left: 4vh;
         margin-right: 4vh;
