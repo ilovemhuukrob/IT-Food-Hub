@@ -1,25 +1,41 @@
 <!-- eslint-disable -->
+<script lang="ts">
 
+  export default {
+    data: () => ({
+      customer: [
+        { text: "หน้าแรก", icon: "mdi-home-outline","href":"/" },
+        { text: "ตะกร้า", icon: "mdi-shopping-outline","href":"/Mycart"  },
+        { text: "ข้อความ", icon: "mdi-chat-processing-outline","href":"/text" },
+        {text:"รับงาน", icon: "mdi-presentation","href": "/job"},
+        {text:"ร้านของฉัน", icon: "mdi-chef-hat","href": "/MyRestaurant"}
+      ],
+    }),
+};
+</script>
 <template>
       <v-navigation-drawer permanent location="left" class="align-center">
         <template v-slot:prepend>
           <v-img class="pa-16" contain width="180" src="@/assets/logo.svg" />
         </template>
-
+        
         <v-list>
-          <v-list-item
-            v-for="(item, i) in customer"
-            :key="i"
-            :value="item"
-            active-color="primary"
-            rounded="xl"
-            class="px-8 mb-6"
-          >
-            <template v-slot:prepend>
-              <v-icon :icon="item.icon"></v-icon>
-            </template>
-            <v-list-item-title v-text="item.text"></v-list-item-title>
-          </v-list-item>
+            <v-list-item
+              v-for="(item, i) in customer"
+              :key="i"
+              :value="item"
+              :to="item.href"
+              active-color="primary"
+              rounded="xl"
+              class="px-8 mb-6"
+            >
+       
+                <template v-slot:prepend>
+                  <v-icon :icon="item.icon"></v-icon>
+                </template>
+                <v-list-item-title v-text="item.text"></v-list-item-title>
+
+            </v-list-item>
         </v-list>
 
         <template v-slot:append>
@@ -40,17 +56,7 @@
       </v-navigation-drawer>
 </template>
 
-<script>
-export default {
-  data: () => ({
-    customer: [
-      { text: "หน้าแรก", icon: "mdi-home-outline" },
-      { text: "ตะกร้า", icon: "mdi-shopping-outline" },
-      { text: "ข้อความ", icon: "mdi-chat-processing-outline" },
-    ],
-  }),
-};
-</script>
+
 
 <style scoped>
 .v-list-item-title {
