@@ -7,13 +7,23 @@
       height="350"
       cover
     ></v-img>
-    <!-- <v-card
+    <v-card
       rounded="xl"
       class="pt-8 pb-5 px-8 ma-10"
       style="transform: translateY(-6.25em)"
     >
       <div class="d-flex justify-space-between">
-        <p style="font-weight: 500" class="text-h3 pb-4">พี่ช้าง - คณะไอที</p>
+        <p style="font-weight: 500; font-size: 2.75rem" class="pb-4">
+          พี่ช้าง - คณะไอที
+        </p>
+        <span class="px-3"></span>
+        <v-switch
+          v-model="status"
+          :label="`${status ? 'Open' : 'Close'}`"
+          color="success"
+          hide-details
+          inset
+        ></v-switch>
         <v-btn icon="mdi-heart-outline"></v-btn>
       </div>
       <div>
@@ -38,7 +48,7 @@
           </v-list-item>
         </v-list>
       </div>
-      <span style="position: absolute; z-index: -1; display: flex">
+      <span class="food" style="position: absolute; z-index: -1; display: flex">
         <v-img
           width="120"
           src="@/assets/drink.svg"
@@ -47,7 +57,7 @@
         <v-img
           width="150"
           src="@/assets/noodle.svg"
-          style="transform: translate(11em, 5em)"
+          style="transform: translate(11em, 5.5em)"
         />
         <v-img
           width="105"
@@ -60,7 +70,7 @@
           style="transform: translate(33em, 0em)"
         />
       </span>
-    </v-card> -->
+    </v-card>
   </div>
 </template>
 
@@ -75,13 +85,15 @@ export default {
       },
       { text: "เวลาทำอาหาร", subtext: "25 นาที", icon: "mdi-alarm" },
     ],
+    status: true,
   }),
 };
 </script>
 
 <style scoped>
-* {
-  font-family: "Mitr", sans-serif !important;
+.food {
+  filter: invert(100%) sepia(26%) saturate(2346%) hue-rotate(177deg)
+    brightness(92%) contrast(117%);
 }
 .v-card {
   display: flex;

@@ -17,7 +17,7 @@
 
 // Composables
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../views/Home.vue'
+import MyRestaurant from '../views/MyRestaurant.vue'
 import User from '../views/User.vue'
 import OrderDelivery from '../views/OrderDelivery.vue'
 import Restaurant from '../views/Restaurant.vue'
@@ -47,6 +47,12 @@ const routes = [
     path: '/Restaurant',
     name: 'Restaurant',
     component : Restaurant
+  },
+  {
+    // หน้าข้างในของร้านค้า
+    path: '/test',
+    name: 'test',
+    component : Test
   }
   
 ]
