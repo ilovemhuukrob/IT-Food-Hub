@@ -35,13 +35,13 @@
         <span>with <span style="color: #fe6612">IT Food Hub</span></span>
       </div>
     </v-card>
-    <span style="position: absolute; transform: translate(47rem, -107%)">
+    <!-- <span style="position: absolute; transform: translate(47rem, -107%)">
       <v-img
         width="240"
         src="@/assets/man.svg"
         style="transform: translate(21em, -2.5em)"
       />
-    </span>
+    </span> -->
   </div>
 </template>
 
