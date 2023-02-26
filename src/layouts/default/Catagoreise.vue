@@ -1,60 +1,39 @@
-<template >
-    <div class="catagory-main">
-        <div class="text"><h1>Catagory</h1></div>
-        <div class="Catagorys-row">
-            <div class="catagory" v-for="catagory in Catagorys" >
-                <div class="img-catagory"></div>
-                <p>{{catagory.text}}</p>
-            </div>
-        </div>
-    </div>
+<template>
+  <v-container>
+    <v-list class="d-flex justify-space-between px-8">
+      <v-list-item
+        class="py-2 px-2 pr-5"
+        v-for="(category, i) in categories"
+        :key="i"
+        :value="category.name"
+        active-color="#2255A4"
+        rounded="xl"
+      >
+        <template v-slot:prepend>
+          <v-avatar color="#D7E1F1">
+            <v-img class="icon-category" :src="category.icon"/>
+          </v-avatar>
+          <v-list-item-title v-text="category.name"></v-list-item-title>
+        </template>
+      </v-list-item>
+    </v-list>
+  </v-container>
 </template>
-<script lang="ts">
-    export default {
-        data: () => ({
-            Catagorys: [
-                //change icon directory
-            { text: "ข้าวแกง", icon: "mdi-home-outline"},
-            { text: "อาหารตามสั่ง", icon: "mdi-shopping-outline" },
-            { text: "ก๊วยเตี๊ยว", icon: "mdi-chat-processing-outline" },
-            { text: "เครื่องดื่ม", icon: "mdi-chat-processing-outline" },
-            { text: "ของทานเล่น", icon: "mdi-chat-processing-outline" },
-            ],
-    }),
+
+<script>
+export default {
+  props: ["categories"],
 };
 </script>
+
 <style scoped>
-    .catagory-main{
-        margin-top: 50px;
-        padding-right: 20px;
-        padding-left: 20px;
-        width: 100%;
-        height: 200px;
-    }
-    .text{
-        margin-bottom: 20px;
-    }
-    .Catagorys-row{
-        display: flex;
-        justify-content: space-between;
-    }
-    .catagory{
-        display: flex;
-        width:200px;
-        border-radius: 50px;
-        background-color: white;
-        height: 80px;
-        align-items: center;
-    }
-    .img-catagory{
-        margin-left: 10px;
-        border-radius: 100px;
-        background-color: darkgray;
-        width: 65px;
-        height: 65px;
-    }
-    .catagory p{
-        margin-left: 20px;
-        color: black;
-    }
+.v-list {
+  background: none;
+}
+.v-list-item {
+  background: white;
+}
+.icon-category {
+    transform: scale(0.7);
+}
 </style>

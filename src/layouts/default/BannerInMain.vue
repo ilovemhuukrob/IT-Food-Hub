@@ -5,7 +5,7 @@
     <v-card
       rounded="xl"
       min-height="220"
-      class="pt-8 pb-5 px-8 ma-10 h-50 d-flex flex-column justify-center"
+      class="pt-8 pb-5 px-8 mx-10 my-5 h-50 d-flex flex-column justify-center"
       color="#2255A4"
     >
       <span class="food" style="position: absolute; z-index: -1; display: flex">

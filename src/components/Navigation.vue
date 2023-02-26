@@ -8,7 +8,7 @@
         { text: "ตะกร้า", icon: "mdi-shopping-outline","href":"/Mycart"  },
         { text: "ข้อความ", icon: "mdi-chat-processing-outline","href":"/text" },
         {text:"รับงาน", icon: "mdi-presentation","href": "/job"},
-        {text:"ร้านของฉัน", icon: "mdi-chef-hat","href": "/job"}
+        {text:"ร้านของฉัน", icon: "mdi-chef-hat","href": "/MyRestaurant"}
       ],
     }),
 };
