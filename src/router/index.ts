@@ -32,7 +32,7 @@ const routes = [
   },
   {
     // หน้าที่มายทำ
-    path: '/Restaurants',
+    path: '/MyRestaurant',
     name: 'home',
     component: Home 
   },
@@ -43,12 +43,13 @@ const routes = [
     component : OrderDelivery
   },
   {
-    // หน้าข้างในของร้านค้า
+    // ไม่มีอะไร
     path: '/Restaurant',
     name: 'Restaurant',
     component : Restaurant
   },
   {
+    // หน้าข้างในของร้านค้า
     path: '/test',
     name: 'Restaurant',
     component : Test
