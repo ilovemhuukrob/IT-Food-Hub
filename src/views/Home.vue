@@ -1,13 +1,6 @@
 <template>
-  <!-- <v-card>
-    <v-layout>
-      <Navigation />
-      <ProfileBar />
-      <v-main style="min-height:100vh"></v-main>
-    </v-layout>
-  </v-card> -->
   <v-main style="min-height:100vh">
-    <Banner></Banner>
+    <Banner/>
   </v-main>
 </template>
 

@@ -21,7 +21,6 @@ import Home from '../views/Home.vue'
 import User from '../views/User.vue'
 import OrderDelivery from '../views/OrderDelivery.vue'
 import Restaurant from '../views/Restaurant.vue'
-import Test from '../views/Test.vue'
 
 const routes = [
   {
@@ -47,11 +46,6 @@ const routes = [
     path: '/Restaurant',
     name: 'Restaurant',
     component : Restaurant
-  },
-  {
-    path: '/test',
-    name: 'Restaurant',
-    component : Test
   }
   
 ]

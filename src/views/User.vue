@@ -2,9 +2,7 @@
 <template>
     <v-main style="min-height:100vh">
         <NavbarMain></NavbarMain>
-        <div class="banner-container">
-            <BannerInMain></BannerInMain>
-        </div>
+        <BannerInMain></BannerInMain>
         <Catagoreise></Catagoreise>
         <RestaurantInMain></RestaurantInMain>
     </v-main>
@@ -17,11 +15,3 @@
    import Catagoreise from '@/layouts/default/Catagoreise.vue'
    import  RestaurantInMain from '@/layouts/default/RestaurantInMain.vue'
 </script>
-<style scoped>
-    .banner-container{
-        width: 100%;
-        height: 250px;
-        display: flex;
-        justify-content: center;
-    }
-</style>
