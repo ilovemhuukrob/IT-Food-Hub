@@ -24,7 +24,6 @@
               v-for="(item, i) in customer"
               :key="i"
               :value="item"
-              :to="item.href"
               active-color="primary"
               rounded="xl"
               class="px-8 mb-6"
