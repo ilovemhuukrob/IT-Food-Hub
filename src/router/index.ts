@@ -31,9 +31,9 @@ const routes = [
   },
   {
     // หน้าที่มายทำ
-    path: '/Restaurants',
-    name: 'home',
-    component: Home 
+    path: '/MyRestaurant',
+    name: 'MyRestaurant',
+    component: MyRestaurant 
   },
   {
     //หน้าคำสั้งของไรเดอ
@@ -42,15 +42,10 @@ const routes = [
     component : OrderDelivery
   },
   {
-    // ไม่มีอะไร
+    // หน้าข้างในของร้านค้า
     path: '/Restaurant',
     name: 'Restaurant',
     component : Restaurant
-  },
-  {
-    path: '/test',
-    name: 'Restaurant',
-    component : Test
   }
   
 ]

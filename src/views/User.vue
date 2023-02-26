@@ -6,20 +6,9 @@
     <Catagoreise
       :categories="categories"
     />
-    <v-container class="container">
-      <RestaurantInMain></RestaurantInMain>
-    </v-container>
+    <RestaurantInMain></RestaurantInMain>
   </v-main>
 </template>
-<style scoped>
-  .container{
-    margin-top: 3vh;
-    width: 100%;
-    padding: 0vh  2vh 0vh 5vh;
-
-    
-  }
-</style>
 
 <script lang="ts" setup>
 import NavbarMain from "@/layouts/default/NavbarMain.vue";
