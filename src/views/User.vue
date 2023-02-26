@@ -1,13 +1,13 @@
 
 <template>
-    <v-main style="min-height:100vh">
-        <NavbarMain></NavbarMain>
-        <div class="banner-container">
-            <BannerInMain></BannerInMain>
-        </div>
-        <Catagoreise></Catagoreise>
-        <RestaurantInMain></RestaurantInMain>
-    </v-main>
+  <v-main style="min-height: 100vh">
+    <NavbarMain></NavbarMain>
+    <BannerInMain></BannerInMain>
+    <Catagoreise
+      :categories="categories"
+    />
+    <RestaurantInMain></RestaurantInMain>
+  </v-main>
 </template>
 
 <script lang="ts" setup>
