@@ -8,7 +8,7 @@
         { text: "ตะกร้า", icon: "mdi-shopping-outline","href":"/Mycart"  },
         { text: "ข้อความ", icon: "mdi-chat-processing-outline","href":"/text" },
         {text:"รับงาน", icon: "mdi-presentation","href": "/job"},
-        {text:"ร้านของฉัน", icon: "mdi-chef-hat","href": "/MyRestaurant"}
+        {text:"ร้านของฉัน", icon: "mdi-chef-hat","href": "/job"}
       ],
     }),
 };
@@ -29,13 +29,14 @@
               rounded="xl"
               class="px-8 mb-6"
             >
-       
-                <template v-slot:prepend>
-                  <v-icon :icon="item.icon"></v-icon>
-                </template>
+            <router-link :to="item.href">
+              <div class="button">
+                <v-icon :icon="item.icon"></v-icon>
                 <v-list-item-title v-text="item.text"></v-list-item-title>
-
+              </div>
+            </router-link>
             </v-list-item>
+
         </v-list>
 
         <template v-slot:append>
@@ -61,5 +62,9 @@
 <style scoped>
 .v-list-item-title {
   font-size: 1em !important;
+}
+.button{
+  display: flex;
+  justify-content: space-between;
 }
 </style>
