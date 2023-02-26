@@ -24,19 +24,17 @@
               v-for="(item, i) in customer"
               :key="i"
               :value="item"
-              :to="item.href"
               active-color="primary"
               rounded="xl"
               class="px-8 mb-6"
             >
-            <router-link :to="item.href">
-              <div class="button">
-                <v-icon :icon="item.icon"></v-icon>
+       
+                <template v-slot:prepend>
+                  <v-icon :icon="item.icon"></v-icon>
+                </template>
                 <v-list-item-title v-text="item.text"></v-list-item-title>
-              </div>
-            </router-link>
-            </v-list-item>
 
+            </v-list-item>
         </v-list>
 
         <template v-slot:append>
@@ -62,9 +60,5 @@
 <style scoped>
 .v-list-item-title {
   font-size: 1em !important;
-}
-.button{
-  display: flex;
-  justify-content: space-between;
 }
 </style>
