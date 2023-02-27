@@ -21,7 +21,7 @@ import MyRestaurant from '../views/MyRestaurant.vue'
 import User from '../views/User.vue'
 import OrderDelivery from '../views/OrderDelivery.vue'
 import Restaurant from '../views/Restaurant.vue'
-import Test from '../views/Test.vue'
+import InRestaurant from '../views/InRestaurant.vue'
 
 const routes = [
   {
@@ -50,9 +50,9 @@ const routes = [
   },
   {
     // หน้าข้างในของร้านค้า
-    path: '/test',
+    path: '/inRestaurant',
     name: 'test',
-    component : Test
+    component : InRestaurant
   }
   
 ]
