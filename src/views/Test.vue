@@ -17,9 +17,7 @@
 </script>
 <template>
         <v-main style="min-height:100vh">
-            <!-- เมนูในร้าน -->
             <MenuInRestaurant></MenuInRestaurant>
-
         </v-main>
 </template>
 <style scoped>
