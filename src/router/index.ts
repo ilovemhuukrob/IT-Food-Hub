@@ -23,6 +23,7 @@ import OrderDelivery from '../views/OrderDelivery.vue'
 import Restaurant from '../views/Restaurant.vue'
 import InRestaurant from '../views/InRestaurant.vue'
 
+
 const routes = [
   {
     //หน้าแรก

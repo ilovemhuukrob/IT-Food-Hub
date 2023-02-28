@@ -20,6 +20,7 @@
 </template>
 <script setup lang="ts">
  import OrderBox from '@/layouts/default/OrderBox.vue';
+ import MenuOverlay from '@/components/MenuOverlay.vue';
 </script>
 <style scoped>
     .container{

@@ -1,11 +1,12 @@
 <script setup lang="ts">
-    import MenuInRestaurant from '@/layouts/default/MenuInRestaurant.vue'
+    
     import DynamicRestaurantBanner from '@/components/DynamicRestaurantBanner.vue';
+    import MenuRestaurant from '@/layouts/default/MenuRestaurant.vue';
 </script>
 <template >
     <v-main style="min-height:100vh">
         <DynamicRestaurantBanner></DynamicRestaurantBanner>
-        <MenuInRestaurant></MenuInRestaurant>
+        <MenuRestaurant></MenuRestaurant>
     </v-main>
 </template>
 <style scoped>
