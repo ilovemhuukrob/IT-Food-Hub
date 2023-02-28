@@ -90,9 +90,11 @@ import MenuOverlay from '@/components/MenuOverlay.vue';
               </div>
             </v-row>
           </v-container>
+          <!--  อันนี้เป็น overlay เอาไว้กด ที่เมนู แล้วจะขึ้นรายละเอียด-->
         <v-overlay v-model="overlay"
             class="align-center justify-center pt-5 "
-        >
+        >        
+        <!--  overlay menu component -->
                 <MenuOverlay></MenuOverlay>
         </v-overlay>
     </v-container>

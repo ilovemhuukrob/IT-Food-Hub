@@ -18,7 +18,8 @@
         <template v-slot:prepend>
           <v-img class="pa-16" contain width="180" src="@/assets/logo.svg" />
         </template>
-        
+        <!--  overlay menu component      เป็น over lay ใน ร้านค้า 
+        @click เพื่อเช็ตว่า ปุ้มเป็น ตะกร้ามั้ย ถ้าใช่ ให้เปิด overlay-->
         <v-list>
             <v-list-item
               v-for="(item, i) in customer"
@@ -28,6 +29,7 @@
               active-color="primary"
               rounded="xl"
               class="px-8 mb-6"
+              
             @click = "item.text == 'ตะกร้า'? overlay = ! overlay : overlay = overlay"  
             >
        
@@ -54,6 +56,7 @@
           </v-list>
         </template>
       </v-navigation-drawer>
+       <!--  overlay cart       เป็น over lay เวลากด ไปที่ cart ใน navbar-->
       <v-overlay v-model="overlay">
           
       </v-overlay>

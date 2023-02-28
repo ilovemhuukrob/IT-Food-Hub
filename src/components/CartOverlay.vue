@@ -1,4 +1,5 @@
 <template>
+  <!--  overlay menu component      เป็น over lay ใน ร้านค้า -->
     <div class=" test-overlay overflow-y-auto"
     
           location="top center"
