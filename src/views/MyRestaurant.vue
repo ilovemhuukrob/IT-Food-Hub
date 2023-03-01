@@ -30,7 +30,7 @@ export default {
     ],
   }),
   methods: {
-    clickShowCategoryName(value) {
+    clickShowCategoryName(value :any) {
       console.log(value);
     }
   }

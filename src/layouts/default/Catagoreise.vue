@@ -28,7 +28,7 @@ export default {
   }),
   props: ["categories"],
   methods: {
-    showCategoryName({categoryName}) {
+    showCategoryName(categoryName : any) {
       this.$emit("clicked-show-category-name", categoryName);
     },
   },

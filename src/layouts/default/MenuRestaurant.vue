@@ -49,8 +49,20 @@ import MenuOverlay from '@/components/MenuOverlay.vue';
             ],
         },
         overlay: false,
+        Carts: [{}]
     }),
-    watch: {},
+    watch: {
+
+    },
+    methods :{
+      // any declear becase of tyscript
+      updateCart(menuFromChid :object){
+          this.Carts.push(menuFromChid)
+          console.log(this.Carts)
+          // เก็บข้อมูลสิครับ
+          localStorage.setItem("Cart",JSON.stringify(this.Carts))
+      }
+    },
     components: { MenuOverlay }
 }
 </script>
@@ -94,8 +106,8 @@ import MenuOverlay from '@/components/MenuOverlay.vue';
         <v-overlay v-model="overlay"
             class="align-center justify-center pt-5 "
         >        
-        <!--  overlay menu component -->
-                <MenuOverlay></MenuOverlay>
+        <!--  overlay menu component  รับข้อมูลผ่าน menu-method จาก Menuoverlay.vue-->
+                <MenuOverlay v-on:Menu-method="updateCart"></MenuOverlay>
         </v-overlay>
     </v-container>
 </template>
