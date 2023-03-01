@@ -2,13 +2,14 @@
   <v-main style="min-height: 100vh">
     <RestaurantBanner />
     <Catagoreise :categories="categories" @clicked-show-category-name="clickShowCategoryName" />
+    <DeliveryList />
   </v-main>
 </template>
 
 <script lang="ts" setup>
 import RestaurantBanner from "@/components/RestaurantBanner.vue";
 import Catagoreise from "@/layouts/default/Catagoreise.vue";
-import MenuInRestaurant from "@/layouts/default/MenuInRestaurant.vue";
+import DeliveryList from "@/layouts/default/DeliveryList.vue";
 </script>
 
 <script lang="ts">
