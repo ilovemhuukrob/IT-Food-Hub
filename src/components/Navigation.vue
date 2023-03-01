@@ -1,3 +1,6 @@
+<script lang="ts" setup>
+import CartOverlay from "@/components/CartOverlay.vue";
+</script>
 
 <script lang="ts">
   export default {
@@ -58,7 +61,7 @@
       </v-navigation-drawer>
        <!--  overlay cart       เป็น over lay เวลากด ไปที่ cart ใน navbar-->
       <v-overlay v-model="overlay">
-          
+          <CartOverlay />
       </v-overlay>
 </template>
 
