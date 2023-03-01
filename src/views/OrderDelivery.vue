@@ -9,6 +9,7 @@
                         v-for="n in 7"
                         :key="n"
                         cols="4"
+                        class="d-flex justify-center py-5"
                     >
                         <OrderBox></OrderBox>
                     </v-col>
@@ -19,6 +20,7 @@
 </template>
 <script setup lang="ts">
  import OrderBox from '@/layouts/default/OrderBox.vue';
+ import MenuOverlay from '@/components/MenuOverlay.vue';
 </script>
 <style scoped>
     .container{

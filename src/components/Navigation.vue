@@ -1,15 +1,15 @@
-<!-- eslint-disable -->
-<script lang="ts">
 
+<script lang="ts">
   export default {
     data: () => ({
       customer: [
         { text: "หน้าแรก", icon: "mdi-home-outline","href":"/" },
-        { text: "ตะกร้า", icon: "mdi-shopping-outline","href":"/Mycart"  },
+        { text: "ตะกร้า", icon: "mdi-shopping-outline","href":""  },
         { text: "ข้อความ", icon: "mdi-chat-processing-outline","href":"/text" },
-        {text:"รับงาน", icon: "mdi-presentation","href": "/job"},
+        {text:"รับงาน", icon: "mdi-presentation","href": "/Order"},
         {text:"ร้านของฉัน", icon: "mdi-chef-hat","href": "/MyRestaurant"}
       ],
+      overlay: false
     }),
 };
 </script>
@@ -18,7 +18,8 @@
         <template v-slot:prepend>
           <v-img class="pa-16" contain width="180" src="@/assets/logo.svg" />
         </template>
-        
+        <!--  overlay menu component      เป็น over lay ใน ร้านค้า 
+        @click เพื่อเช็ตว่า ปุ้มเป็น ตะกร้ามั้ย ถ้าใช่ ให้เปิด overlay-->
         <v-list>
             <v-list-item
               v-for="(item, i) in customer"
@@ -28,17 +29,18 @@
               active-color="primary"
               rounded="xl"
               class="px-8 mb-6"
+              
+            @click = "item.text == 'ตะกร้า'? overlay = ! overlay : overlay = overlay"  
             >
        
                 <template v-slot:prepend>
                   <v-icon :icon="item.icon"></v-icon>
                 </template>
                 <v-list-item-title v-text="item.text"></v-list-item-title>
-
             </v-list-item>
         </v-list>
 
-        <template v-slot:append>
+        <template v-slot:append>  
           <v-list class="pb-14">
             <v-list-item
               value="logout"
@@ -54,6 +56,10 @@
           </v-list>
         </template>
       </v-navigation-drawer>
+       <!--  overlay cart       เป็น over lay เวลากด ไปที่ cart ใน navbar-->
+      <v-overlay v-model="overlay">
+          
+      </v-overlay>
 </template>
 
 

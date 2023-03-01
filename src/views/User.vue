@@ -1,6 +1,8 @@
 
 <template>
   <v-main style="min-height: 100vh">
+    <NavbarMain></NavbarMain>
+    <BannerInMain></BannerInMain>
     <Catagoreise
       :categories="categories"
     />
