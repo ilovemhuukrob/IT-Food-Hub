@@ -1,97 +1,84 @@
 <template>
-  <v-container class="d-flex px-11 pb-11">
-    <v-card class="w-25">
-      <v-list>
-        <v-list-item
-          v-for="item in items"
-          :key="item.id"
-          :value="item.id"
-          :title="item.id"
-          :subtitle="item.datetime"
-        >
-        </v-list-item>
-      </v-list>
-    </v-card>
-    <v-container style="background:white" class="w-75 pa-8 pb-14">
-      <v-row no-gutters>
-        <v-col cols="12">
-          <div class="pa-3">ORDER NO:</div>
+  <v-container class="px-10 d-flex">
+    <div style="width: 65%">
+      <v-row class="ma-0 pa-0" style="background: red">
+        <v-col v-for="order in orders" :key="order" cols="12" sm="4">
+          <v-sheet
+            style="text-align: center"
+            class="pa-3"
+            rounded="xl"
+            elevation="2"
+          >
+            <div class="pa-3" style="font-weight: 500">
+              Order ID # {{ order.id }}
+            </div>
+            <v-sheet
+              class="d-flex flex-column"
+              :style="{
+                backgroundColor: order.status == 'Done' ? '#E8F5E9' : '#FFF3E0',
+              }"
+              rounded="xl"
+            >
+              <div class="d-flex flex-column pa-5">
+                <div style="font-weight: 500">Order Time</div>
+                <span>{{ order.ordertime }}</span>
+              </div>
+              <div
+                class="pa-3"
+                :style="{
+                  color: order.status == 'Done' ? '#1B5E20' : '#E65100',
+                }"
+              >
+                {{ order.status }}
+              </div>
+            </v-sheet>
+          </v-sheet>
         </v-col>
-        <v-col cols="6">
-          <div class="pa-3">Status</div>
-          <div class="pa-3">Total Amount</div>
-        </v-col>
-        <v-col cols="6">
-          <div class="pa-3">Thaipat Lawthanavijit</div>
-          <div class="pa-3">ห้อง 308 คณะเทคโนโลยีสารสนเทศ</div>
-          <div class="pa-3">Apr 11, 2023, 12:00</div>
-        </v-col>
-        <v-divider class="mt-8"></v-divider>
-        <v-col cols="12">
-          <v-table>
-            <thead>
-              <tr>
-                <th class="text-center">No</th>
-                <th class="text-center">Item</th>
-                <th class="text-center">Quantity</th>
-                <th class="text-center">Amount</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr v-for="item,i in desserts" :key="item.name">
-                <td class="text-center">{{i+1}}</td>
-                <td class="text-left">{{ item.name }}</td>
-                <td class="text-center">{{ item.quantity }}</td>
-                <td class="text-center">฿ {{ item.quantity * 50 }}</td>
-              </tr>
-            </tbody>
-          </v-table>
-        </v-col>
-        <v-divider></v-divider>
       </v-row>
-    </v-container>
+    </div>
+    <OrderSummary />
   </v-container>
 </template>
+
+<script lang="ts" setup>
+import OrderSummary from "@/layouts/default/OrderSummary.vue";
+</script>
 
 <script lang="ts">
 export default {
   data: () => ({
-    items: [
+    orders: [
       {
-        id: "0004",
-        datetime: "Apr 11, 2023, 12:00",
-        price: 771,
+        id: "4897595",
+        ordertime: "12 Aug, 2023 12:00",
+        status: "Cooking",
       },
       {
-        id: "0003",
-        datetime: "Apr 11, 2023, 12:00",
-        price: 771,
+        id: "4897595",
+        ordertime: "12 Aug, 2023 12:00",
+        status: "Cooking",
       },
       {
-        id: "0002",
-        datetime: "Apr 11, 2023, 12:00",
-        price: 771,
+        id: "4897595",
+        ordertime: "12 Aug, 2023 12:00",
+        status: "Cooking",
       },
       {
-        id: "0001",
-        datetime: "Apr 11, 2023, 12:00",
-        price: 771,
+        id: "4897595",
+        ordertime: "12 Aug, 2023 12:00",
+        status: "Done",
+      },
+      {
+        id: "4897595",
+        ordertime: "12 Aug, 2023 12:00",
+        status: "Done",
+      },
+      {
+        id: "4897595",
+        ordertime: "12 Aug, 2023 12:00",
+        status: "Done",
       },
     ],
-    desserts: [
-          {
-            name: 'กะเพรา',
-            quantity: 1,
-          },
-          {
-            name: 'ราดหน้า',
-            quantity: 2,
-          },
-          {
-            name: 'ราดตัว',
-            quantity: 3,
-          },
-        ],
   }),
 };
 </script>

@@ -23,12 +23,9 @@
 
 <script lang="ts">
 export default {
-  data: () => ({
-    categoryValue: "",
-  }),
   props: ["categories"],
   methods: {
-    showCategoryName({categoryName}) {
+    showCategoryName(categoryName) {
       this.$emit("clicked-show-category-name", categoryName);
     },
   },
