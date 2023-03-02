@@ -2,7 +2,9 @@
   <v-main style="min-height: 100vh">
     <RestaurantBanner />
     <Catagoreise :categories="categories" @clicked-show-category-name="clickShowCategoryName" />
-    <DeliveryList v-show="categoryName == 'รายการเดลิเวอรี'" />
+    <span v-show="categoryName == 'รายการเดลิเวอรี'">
+      <DeliveryList />
+    </span>
   </v-main>
 </template>
 
@@ -33,6 +35,7 @@ export default {
   }),
   methods: {
     clickShowCategoryName(value) {
+      console.log(value)
       if (this.categoryName == value) {
         this.categoryName = ''
       }
