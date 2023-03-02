@@ -7,7 +7,6 @@
         :key="i"
         :value="category.name"
         active-color="#2255A4"
-        @click="showCategoryName(category.name)"
         rounded="xl"
       >
         <template v-slot:prepend>
@@ -23,12 +22,30 @@
 
 <script lang="ts">
 export default {
-  props: ["categories"],
-  methods: {
-    showCategoryName(categoryName : any) {
-      this.$emit("clicked-show-category-name", categoryName);
-    },
-  },
+  data: () => ({
+    categories: [
+      {
+        name: "ข้าวแกง",
+        icon: "/src/assets/ข้าวแกง.png",
+      },
+      {
+        name: "อาหารตามสั่ง",
+        icon: "/src/assets/อาหารตามสั่ง.png",
+      },
+      {
+        name: "ก๊วยเตี๋ยว",
+        icon: "/src/assets/ก๊วยเตี๋ยว.png",
+      },
+      {
+        name: "เครื่องดื่ม",
+        icon: "/src/assets/เครื่องดื่ม.png",
+      },
+      {
+        name: "ของทานเล่น",
+        icon: "/src/assets/ของทานเล่น.png",
+      }
+    ],
+  }),
 };
 </script>
 
