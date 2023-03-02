@@ -60,7 +60,9 @@ import CartOverlay from "@/components/CartOverlay.vue";
         </template>
       </v-navigation-drawer>
        <!--  overlay cart       เป็น over lay เวลากด ไปที่ cart ใน navbar-->
-      <v-overlay v-model="overlay">
+      <v-overlay v-model="overlay"
+          class="align-center justify-center pt-5 "
+      >
           <CartOverlay />
       </v-overlay>
 </template>

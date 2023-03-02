@@ -31,9 +31,10 @@
           </div>
           <div class="check-box">
             <v-checkbox
+            v-model="หมู"
             label="หมู"
             color="success"
-            value="success"
+            value="หมู"
             hide-details
             ></v-checkbox>
             <div>
@@ -42,9 +43,10 @@
           </div>
           <div class="check-box">
             <v-checkbox
-            label="หมู"
+            v-model="ไก่"
+            label="ไก่"
             color="success"
-            value="success"
+            value="ไก่"
             hide-details
             ></v-checkbox>
             <div>
@@ -53,9 +55,10 @@
           </div>
           <div class="check-box">
             <v-checkbox
-            label="หมู"
+            v-model="กุ้ง"
+            label="กุ้ง"
             color="success"
-            value="success"
+            value="กุ้ง"
             hide-details
             ></v-checkbox>
             <div>
@@ -64,9 +67,10 @@
           </div >
           <div class="check-box">
             <v-checkbox
-            label="หมู"
+            v-model="หมึก"
+            label="หมึก"
             color="success"
-            value="success"
+            value="หมึก"
             hide-details
             ></v-checkbox>
             <div>
@@ -78,9 +82,10 @@
           </div>
           <div class="check-box">
             <v-checkbox
-            label="หมู"
+            v-model="ไข่ดาว"
+            label="ไข่ดาว"
             color="success"
-            value="success"
+            value="ไข่ดาว"
             hide-details
             ></v-checkbox>
             <div>
@@ -89,9 +94,10 @@
           </div>
           <div class="check-box">
             <v-checkbox
-            label="หมู"
+              v-model="ไข่เจียว"
+            label="ไข่เจียว"
             color="success"
-            value="success"
+            value="ไข่เจียว"
             hide-details
             ></v-checkbox>
             <div>
@@ -107,13 +113,14 @@
             mt-03
         ></v-text-field>
         </div>
-        <div class="button-submit">
+        <div class="button-submit" >
             <v-btn>+</v-btn>
             <v-btn>1</v-btn>
             <v-btn>-</v-btn>
             <v-btn
               width="320px"
               color="success"
+              @click = "AddTocart()"
             >เพิ่มสิ้นค้าไปยังตะกร้า</v-btn>
         </div>
       </div>
@@ -183,11 +190,29 @@
   export default {
     data: () => ({
       scrollInvoked: 0,
+      หมู : "",
+      ไก่ : "",
+      กุ้ง : "",
+      หมึก : "",
+      ไข่ดาว: "",
+      ไข่เจียว : "",
+      menu :{},
+      setOfmenu : [{}]
     }),
     methods: {
       onScroll () {
         this.scrollInvoked++
       },
+      AddTocart(){
+          let  Menu  = {
+            "name" : "กะเพรา",
+            "เนื้อสัตว์" : this.หมู + this.ไก่ + this.หมึก + this.กุ้ง,
+            "เครื่องเคียง"  : this.ไข่เจียว + this.ไข่ดาว
+          }
+          this.menu = Menu
+          // ส่ง ข้อมูล meu ที่ส้ั้งแล้วไป ยัง parent component คือ MenuRestaurant.vue
+          this.$emit('Menu-method', this.menu)
+      }
     },
   }
 </script>
