@@ -2,18 +2,20 @@
   <v-main style="min-height: 100vh">
     <RestaurantBanner />
     <Catagoreise :categories="categories" @clicked-show-category-name="clickShowCategoryName" />
+    <DeliveryList v-show="categoryName == 'รายการเดลิเวอรี'" />
   </v-main>
 </template>
 
 <script lang="ts" setup>
 import RestaurantBanner from "@/components/RestaurantBanner.vue";
 import Catagoreise from "@/layouts/default/Catagoreise.vue";
-import MenuInRestaurant from "@/layouts/default/MenuInRestaurant.vue";
+import DeliveryList from "@/layouts/default/DeliveryList.vue";
 </script>
 
 <script lang="ts">
 export default {
   data: () => ({
+    categoryName: '',
     categories: [
       {
         name: "รายการเดลิเวอรี",
@@ -30,8 +32,13 @@ export default {
     ],
   }),
   methods: {
-    clickShowCategoryName(value :any) {
-      console.log(value);
+    clickShowCategoryName(value) {
+      if (this.categoryName == value) {
+        this.categoryName = ''
+      }
+      else {
+        this.categoryName = value;
+      }
     }
   }
 };
