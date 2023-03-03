@@ -17,8 +17,30 @@
             </v-container>
     </v-main>
 </template>
+<<<<<<< Updated upstream
 <script setup lang="ts">
  import OrderBox from '@/layouts/default/OrderBox.vue';
+=======
+<script lang="js">
+    import OrderBox from '@/layouts/default/OrderBox.vue';
+    export default {
+    data: () => ({
+        cart: []
+    }),
+    // เริ่มมาให้โหลด ข้อมูลที่สั้งซื้อ
+    created() {
+        this.cart = JSON.parse(localStorage.getItem("Order"));
+        console.log(this.cart);
+    },
+    // หลังจากนั้นก็อัพเดท ตลอด
+    mounted() {
+        this.cart = JSON.parse(localStorage.getItem("Order"));
+    },
+    components: { OrderBox }
+};
+
+
+>>>>>>> Stashed changes
 </script>
 <style scoped>
     .container{
