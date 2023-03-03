@@ -23,9 +23,6 @@
 
 <script lang="ts">
 export default {
-  data: () => ({
-    categoryValue: "",
-  }),
   props: ["categories"],
   methods: {
     showCategoryName(categoryName : any) {
