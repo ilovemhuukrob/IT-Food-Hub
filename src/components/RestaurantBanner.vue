@@ -1,7 +1,6 @@
-<!-- eslint-disable -->
-
 <template>
-  <div>
+<!-- eslint-disable -->
+  <div style="margin-bottom:-8rem;">
     <v-img
       src="https://cdn.discordapp.com/attachments/812749326543487058/1074303855329816586/image_1.png"
       height="350"
@@ -10,7 +9,7 @@
     <v-card
       rounded="xl"
       class="pt-8 pb-5 px-8 ma-10"
-      style="transform: translateY(-6.25em)"
+      style="transform: translateY(-6.25rem);"
     >
       <div class="d-flex justify-space-between">
         <p style="font-weight: 500; font-size: 2.75rem" class="pb-4">

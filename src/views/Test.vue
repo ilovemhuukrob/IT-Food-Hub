@@ -1,6 +1,7 @@
 <script lang="ts">
     import BannerInMain from '@/layouts/default/BannerInMain.vue';
     import MenuInRestaurant from '@/layouts/default/MenuInRestaurant.vue';
+    import DynamicRestaurantBanner from '@/components/DynamicRestaurantBanner.vue'
         export default {
         data: () => ({
             items: [
@@ -12,14 +13,12 @@
                 { text: "เวลาทำอาหาร", subtext: "25 นาที", icon: "mdi-alarm" },
             ],
         }),
-        components: { BannerInMain, MenuInRestaurant }
     };
 </script>
 <template>
         <v-main style="min-height:100vh">
-            <!-- เมนูในร้าน -->
+            <DynamicRestaurantBanner></DynamicRestaurantBanner>
             <MenuInRestaurant></MenuInRestaurant>
-
         </v-main>
 </template>
 <style scoped>
