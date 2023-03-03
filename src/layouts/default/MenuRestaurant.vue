@@ -67,7 +67,7 @@ import MenuOverlay from '@/components/MenuOverlay.vue';
 }
 </script>
 <template>
-    <v-container class="pa-2 ma-0 pb-16">
+    <v-container class="pa-2 ma-0">
         <v-container class="pa-2 ma-0 pb-16">
             <v-row v-for="(type, typeName) in Menus">
               <p class="typeName px-14 pa-5">{{ typeName }}</p>

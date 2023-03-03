@@ -1,79 +1,56 @@
-<script lang="ts" setup>
-import DeliveryList from "@/layouts/default/DeliveryList.vue";
-</script>
-
 <template>
-  <v-btn-toggle>
-    <v-btn @click="deliveryList = !deliveryList" rounded="xl" class="px-1">
-      <v-avatar color="#D7E1F1">
-        <v-img class="c-icon" src="@/assets/รายการเดลิเวอรี.png"></v-img>
-      </v-avatar>
-      <span class="px-1"></span>
-      <span>รายการเดลิเวอรี</span>
-    </v-btn>
-
-    <v-btn
-      rounded="xl"
-      class="px-1"
-      @click="(overlay = !overlay), (addMenu = false), (deliveryList = false)"
-    >
-      <v-avatar color="#D7E1F1">
-        <v-img class="c-icon" src="@/assets/ตั้งค่าเมนูอาหาร.png"></v-img>
-      </v-avatar>
-      <span class="px-1"></span>
-      <span>ตั้งค่าเมนูอาหาร</span>
-    </v-btn>
-  </v-btn-toggle>
-
-  <span v-show="deliveryList">
-    <DeliveryList/>
-  </span>
-
-  <v-overlay v-model="overlay" class="d-flex justify-center align-center">
-    <span v-show="!addMenu">
-      <v-btn class="my-2" style="width: 100%" @click="addMenu = true">
-        เพิ่มเมนูอาหาร
-      </v-btn>
-      <v-btn class="my-2" style="width: 100%">แก้ไขเมนูอาหาร</v-btn>
-    </span>
-    <span v-show="addMenu">
-      <v-sheet rounded="xl" style="width: 600px">
-        <div class="d-flex flex-column">
-          <span>เพิ่มรูป</span>
-          <span
-            >*ภาพประกอบที่สวยและคมชัดมักทำให้อาหารเป็นที่นิยมของลูกค้า
-            ขนาดสูงสุด 2 MB นามสกุลไฟล์ที่รองรับ PNG, JPG</span
-          >
-        </div>
-        <div>
-          <span>ชื่ออาหาร</span>
-          <v-text-field label="Label"></v-text-field>
-        </div>
-        <div>
-          <span>รายละเอียดอาหาร</span>
-          <v-text-field label="Label"></v-text-field>
-        </div>
-      </v-sheet>
-    </span>
-  </v-overlay>
+  <v-container class="ml-0">
+    <v-list class="d-flex justify-space-between px-8">
+      <v-list-item
+        class="py-2 px-2 pr-5"
+        v-for="(category, i) in categories"
+        :key="i"
+        :value="category.name"
+        @click="showCategoryName(category.name)"
+        active-color="#2255A4"
+        rounded="xl"
+      >
+        <template v-slot:prepend>
+          <v-avatar color="#D7E1F1">
+            <v-img class="icon-category" :src="category.icon" />
+          </v-avatar>
+          <v-list-item-title v-text="category.name"></v-list-item-title>
+        </template>
+      </v-list-item>
+    </v-list>
+  </v-container>
 </template>
 
 <script lang="ts">
 export default {
-  data() {
-    return {
-      select: '',
-      toggle_exclusive: 0,
-      overlay: false,
-      addMenu: false,
-      deliveryList: false
-    };
+  data: () => ({
+    categories: [
+      {
+        name: "รายการเดลิเวอรี",
+        icon: "/src/assets/รายการเดลิเวอรี.png",
+      },
+      {
+        name: "ตั้งค่าเมนูอาหาร",
+        icon: "/src/assets/ตั้งค่าเมนูอาหาร.png",
+      },
+    ],
+  }),
+  methods: {
+    showCategoryName(categoryName : any) {
+      this.$emit("clicked-show-category-name", categoryName);
+    },
   },
 };
 </script>
 
 <style scoped>
-.c-icon {
+.v-list {
+  background: none;
+}
+.v-list-item {
+  background: white;
+}
+.icon-category {
   transform: scale(0.6);
 }
 </style>
