@@ -197,7 +197,7 @@
       ไข่ดาว: "",
       ไข่เจียว : "",
       menu :{},
-      setOfmenu : [{}]
+      setOfmenu : []
     }),
     methods: {
       onScroll () {

@@ -49,7 +49,7 @@ import MenuOverlay from '@/components/MenuOverlay.vue';
             ],
         },
         overlay: false,
-        Carts: [{}]
+        Carts: []
     }),
     watch: {
 
