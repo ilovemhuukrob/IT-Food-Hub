@@ -1,5 +1,5 @@
 <script lang="ts">
-    import BannerInMain from '@/layouts/default/BannerInMain.vue';
+    import BannerInMain from '@/layouts/default/HomeBanner.vue';
     import MenuInRestaurant from '@/layouts/default/MenuInRestaurant.vue';
     import DynamicRestaurantBanner from '@/components/DynamicRestaurantBanner.vue'
         export default {

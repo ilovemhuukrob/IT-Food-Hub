@@ -1,10 +1,10 @@
 <template>
-  <v-container class="px-10 pb-10 d-flex">
+  <v-container class="px-10 d-flex">
     <div style="width: 65%">
       <v-row class="ma-0 pa-0" style="background: red">
-        <v-col v-for="order in orders" :key="order" cols="12" sm="4" @click="SelectOrderSummary(order)">
+        <v-col v-for="order in orders" :key="order" cols="12" sm="4">
           <v-sheet
-            style="text-align: center; cursor: pointer;"
+            style="text-align: center"
             class="pa-3"
             rounded="xl"
             elevation="2"
@@ -21,7 +21,7 @@
             >
               <div class="d-flex flex-column pa-5">
                 <div style="font-weight: 500">Order Time</div>
-                <span>{{ order.time }}</span>
+                <span>{{ order.ordertime }}</span>
               </div>
               <div
                 class="pa-3"
@@ -36,7 +36,7 @@
         </v-col>
       </v-row>
     </div>
-    <OrderSummary :order="orderSelect"/>
+    <OrderSummary />
   </v-container>
 </template>
 
@@ -47,44 +47,38 @@ import OrderSummary from "@/layouts/default/OrderSummary.vue";
 <script lang="ts">
 export default {
   data: () => ({
-    orderSelect: {},
     orders: [
       {
         id: "4897595",
-        time: "12 Aug, 2023 12:00",
+        ordertime: "12 Aug, 2023 12:00",
         status: "Cooking",
       },
       {
-        id: "4897411",
-        time: "12 Aug, 2023 12:00",
+        id: "4897595",
+        ordertime: "12 Aug, 2023 12:00",
         status: "Cooking",
       },
       {
-        id: "4897445",
-        time: "12 Aug, 2023 12:00",
+        id: "4897595",
+        ordertime: "12 Aug, 2023 12:00",
         status: "Cooking",
       },
       {
-        id: "4897588",
-        time: "12 Aug, 2023 12:00",
+        id: "4897595",
+        ordertime: "12 Aug, 2023 12:00",
         status: "Done",
       },
       {
-        id: "4897511",
-        time: "12 Aug, 2023 12:00",
+        id: "4897595",
+        ordertime: "12 Aug, 2023 12:00",
         status: "Done",
       },
       {
-        id: "4897500",
-        time: "12 Aug, 2023 12:00",
+        id: "4897595",
+        ordertime: "12 Aug, 2023 12:00",
         status: "Done",
       },
     ],
   }),
-  methods: {
-    SelectOrderSummary(value) {
-      this.orderSelect = value
-    }
-  }
 };
 </script>

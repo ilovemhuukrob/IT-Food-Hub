@@ -26,12 +26,12 @@
     }),
     // เริ่มมาให้โหลด ข้อมูลที่สั้งซื้อ
     created() {
-        this.cart = JSON.parse(localStorage.getItem("Cart"));
+        this.cart = JSON.parse(localStorage.getItem("Order"));
         console.log(this.cart);
     },
     // หลังจากนั้นก็อัพเดท ตลอด
     mounted() {
-        this.cart = JSON.parse(localStorage.getItem("Cart"));
+        this.cart = JSON.parse(localStorage.getItem("Order"));
     },
     components: { OrderBox }
 };
