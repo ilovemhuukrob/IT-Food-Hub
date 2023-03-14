@@ -19,7 +19,7 @@
           <v-img class="icon-category" :src="category.icon" />
         </v-avatar>
         <div class="px-2"></div>
-        <div style="font-weight: 600;">{{ category.name }}</div>
+        <div style="font-weight: 600">{{ category.name }}</div>
       </v-btn>
     </v-btn-toggle>
   </v-container>

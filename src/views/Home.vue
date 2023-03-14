@@ -1,21 +1,17 @@
 <template>
-  <!-- <v-card>
-    <v-layout>
-      <Navigation />
-      <ProfileBar />
-      <v-main style="min-height:100vh"></v-main>
-    </v-layout>
-  </v-card> -->
-  <v-main style="min-height:100vh">
-    <Banner></Banner>
+  <v-main>
+    <div class="pa-12">
+      <HeaderSearchBar />
+      <HomeBanner />
+      <HomeCategories />
+      <HomeRestaurantList />
+    </div>
   </v-main>
 </template>
 
-<script lang="ts" setup>
-import Navigation from "@/components/Navigation.vue";
-import ProfileBar from "@/components/ProfileBar.vue";
-import Banner from "@/components/Banner.vue";
+<script setup>
+import HeaderSearchBar from "@/components/HeaderSearchBar.vue";
+import HomeBanner from "@/components/HomeBanner.vue";
+import HomeCategories from "@/components/HomeCategories.vue";
+import HomeRestaurantList from "@/layouts/default/HomeRestaurantList.vue";
 </script>
-
-<style scope>
-</style>

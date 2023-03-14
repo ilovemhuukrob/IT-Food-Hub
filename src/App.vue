@@ -1,14 +1,20 @@
 <template>
   <v-card>
-    <v-layout>
-      <Navigation />
-      <ProfileBar />
+    <v-layout v-show="$route.path == '/'">
+
+      <router-view />
+    </v-layout>
+
+    <v-layout v-show="$route.path != '/'">
+      <LeftNavigation />
+      <RightProfile />
       <router-view />
     </v-layout>
   </v-card>
 </template>
 
-<script lang="ts" setup>
-import Navigation from "@/components/Navigation.vue";
-import ProfileBar from "@/components/ProfileBar.vue";
+<script setup>
+import { useRoute } from "vue-router";
+import LeftNavigation from "@/components/LeftNavigation.vue";
+import RightProfile from "@/components/RightProfile.vue";
 </script>

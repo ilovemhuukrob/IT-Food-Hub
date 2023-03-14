@@ -1,5 +1,5 @@
 /**
- * plugins/vuetify.ts
+ * plugins/vuetify.js
  *
  * Framework documentation: https://vuetifyjs.com`
  */
@@ -9,9 +9,9 @@ import '@mdi/font/css/materialdesignicons.css'
 import 'vuetify/styles'
 
 // Composables
-import { createVuetify, ThemeDefinition } from 'vuetify'
+import { createVuetify } from 'vuetify'
 
-const it: ThemeDefinition = {
+const it = {
   dark: false,
   colors: {
     it: '#2255A4'
@@ -24,12 +24,6 @@ export default createVuetify({
     defaultTheme: 'it',
     themes: {
       it,
-      light: {
-        colors: {
-          primary: '#1867C0',
-          secondary: '#5CBBF6',
-        },
-      },
-    },
-  },
+    }
+  }
 })

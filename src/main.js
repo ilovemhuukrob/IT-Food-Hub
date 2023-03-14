@@ -1,5 +1,5 @@
 /**
- * main.ts
+ * main.js
  *
  * Bootstraps Vuetify and other plugins then mounts the App`
  */
@@ -12,8 +12,6 @@ import { createApp } from 'vue'
 
 // Plugins
 import { registerPlugins } from '@/plugins'
-
-import '@/styles/settings.scss'
 
 const app = createApp(App)
 
