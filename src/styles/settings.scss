@@ -9,12 +9,27 @@
 //   $color-pack: false
 // );
 
-@import 'https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500&display=swap';
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@300;400;500&family=Poppins:wght@300;400;500;600&display=swap');
 
-* {
-    font-family: 'Mitr', sans-serif;
+*, p {
+    font-family: 'Poppins', 'Mitr', sans-serif !important;
+    font-weight: 500;
+}
+
+.h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.h2 {
+    font-size: 1.75rem;
 }
 
 .v-main {
     background-color: #D7E1F1 !important;
+    min-height: 100vh;
+}
+
+.v-container {
+    padding: 0;
 }

@@ -1,21 +1,21 @@
 
 <template>
-  <v-main style="min-height: 100vh">
-    <NavbarMain></NavbarMain>
+  <v-main>
+    <div class="pa-12">
+          <HeaderSearchBar/>
     <BannerInMain></BannerInMain>
-    <Catagoreise
-      :categories="categories"
-    />
+    <Catagoreise/>
     <RestaurantInMain></RestaurantInMain>
+    </div>
   </v-main>
 </template>
 
 <script lang="ts" setup>
-import NavbarMain from "@/layouts/default/NavbarMain.vue";
+import HeaderSearchBar from "@/layouts/default/HeaderSearchBar.vue";
 //Banner is just a empty box bordered-radius สามารถใช้ได้ทุกหน้าที่มี
-import BannerInMain from "@/layouts/default/BannerInMain.vue";
-import Catagoreise from "@/layouts/default/Catagoreise.vue";
-import RestaurantInMain from "@/layouts/default/RestaurantInMain.vue";
+import BannerInMain from "@/layouts/default/HomeBanner.vue";
+import Catagoreise from "@/layouts/default/HomeCatagoreise.vue";
+import RestaurantInMain from "@/layouts/default/HomeRestaurants.vue";
 </script>
 
 <script lang="ts">
@@ -31,7 +31,7 @@ export default {
         icon: "/src/assets/อาหารตามสั่ง.png",
       },
       {
-        name: "ก๊วยเตี๋ยว",
+        name: "ก๋วยเตี๋ยว",
         icon: "/src/assets/ก๊วยเตี๋ยว.png",
       },
       {
