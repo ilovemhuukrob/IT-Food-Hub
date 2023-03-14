@@ -7,12 +7,23 @@
                  <!-- Comment -->
                 <!-- left content คือ รับอาหารจากที่ไหน ไปที่ไหน -->
                 <div class="left-content">
-
+                        
                 </div>
                 <!-- Comment -->
                 <!-- right content คือ ค่าอาหาร และจำนวนอาหาร -->
                 <div class="right-content">
-                    
+                    <div class="text">
+                        ค่าอาหาร
+                    </div>
+                    <div class="text">
+                        150
+                    </div>
+                    <div class="text">
+                        จำนวน
+                    </div>
+                    <div class="text">
+                        3 รายการ
+                    </div>
                 </div>
             </div>
             <!-- Comment -->
@@ -46,19 +57,22 @@
         height: 220px;
     }
     .top-content{
+        padding-top: 1vw;
         display: flex;
         width: 310px;
         height: 170px;
-        
+        padding-bottom: 1vw;
     }
     .left-content{
         width: 155px;
-        height: 170px;
+        height: 150px;
+        border-right: 1px solid black;
        
     }
     .right-content{
+        padding-left: 4vh;
         width: 155px;
-        height: 170px;
+        height: 150px;
        
     }
     .bottom-content{
@@ -77,4 +91,5 @@
         color: white;
         background-color: rgb(254,102,18);
     }
+    
 </style>

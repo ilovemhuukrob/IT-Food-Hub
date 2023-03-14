@@ -6,9 +6,10 @@
                     no-gutters
                 >
                     <v-col
-                        v-for="n in 7"
+                        v-for="n in cart"
                         :key="n"
                         cols="4"
+                        class="d-flex justify-center py-5"
                     >
                         <OrderBox></OrderBox>
                     </v-col>
@@ -17,34 +18,14 @@
             </v-container>
     </v-main>
 </template>
-<<<<<<< Updated upstream
 <script setup lang="ts">
  import OrderBox from '@/layouts/default/OrderBox.vue';
-=======
-<script lang="js">
-    import OrderBox from '@/layouts/default/OrderBox.vue';
-    export default {
-    data: () => ({
-        cart: []
-    }),
-    // เริ่มมาให้โหลด ข้อมูลที่สั้งซื้อ
-    created() {
-        this.cart = JSON.parse(localStorage.getItem("Order"));
-        console.log(this.cart);
-    },
-    // หลังจากนั้นก็อัพเดท ตลอด
-    mounted() {
-        this.cart = JSON.parse(localStorage.getItem("Order"));
-    },
-    components: { OrderBox }
-};
-
-
->>>>>>> Stashed changes
 </script>
 <style scoped>
+
     .container{
         margin-top: 50px;
     }
+    
 
 </style>
