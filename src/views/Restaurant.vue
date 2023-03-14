@@ -17,7 +17,7 @@
 </template>
 
 <script lang="ts">
-    import BannerInMain from '@/layouts/default/BannerInMain.vue'
+    import BannerInMain from '@/layouts/default/HomeBanner.vue'
     export default {
     data: () => ({
         items: [

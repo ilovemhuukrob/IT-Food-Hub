@@ -18,8 +18,25 @@
             </v-container>
     </v-main>
 </template>
-<script setup lang="ts">
- import OrderBox from '@/layouts/default/OrderBox.vue';
+<script lang="ts">
+    import OrderBox from '@/layouts/default/OrderBox.vue';
+    export default {
+    data: () => ({
+        cart: []
+    }),
+    // เริ่มมาให้โหลด ข้อมูลที่สั้งซื้อ
+    created() {
+        this.cart = JSON.parse(localStorage.getItem("Order"));
+        console.log(this.cart);
+    },
+    // หลังจากนั้นก็อัพเดท ตลอด
+    mounted() {
+        this.cart = JSON.parse(localStorage.getItem("Order"));
+    },
+    components: { OrderBox }
+};
+
+
 </script>
 <style scoped>
 
